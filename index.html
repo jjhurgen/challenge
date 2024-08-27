@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="text-input">
+            <textarea name="input-text" class="input-text" id="input-text" cols="30" rows="10"
+                placeholder="Ingresa el texto aquí"></textarea>
+
+            <div class="instructions">
+                <p>Solo letras minúsculas y sin acentos.</p>
+            </div>
+            <div class="action-buttons">
+                <button class="btn-encode" type="button" onclick="encodeText()">
+                    Encriptar
+                </button>
+                <input type="button" class="btn-decode" value="Desencriptar" onclick="decodeText()" />
+            </div>
+        </div>
+        <div class="result-container">
+            <img src="img/Muñeco.svg" alt="" id="icon" />
+            <div class="result-message" id="result-message" style="display: none;">
+                <h2 id="message-title">Ningún mensaje fue encontrado</h2>
+                <p id="message-text">
+                    Ingresa el texto que deseas encriptar o desencriptar
+                </p>
+                <textarea id="output-text" class="output-text" readonly></textarea>
+                <input class="btn-copy" id="copy-button" type="button" value="Copiar" onclick="copyText()"
+                    style="display: none;" />
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>&copy; 2024 Jefferson De la Cruz</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>

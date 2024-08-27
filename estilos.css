@@ -1,0 +1,259 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales para el body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos del contenedor principal */
+.main-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3f5fc;
+    position: relative;
+}
+
+/* Estilos del área de entrada de texto */
+.text-input {
+    position: absolute;
+    width: 45%;
+    height: 65%;
+    left: 10%;
+    top: 15%;
+}
+
+.input-text {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-family: "Inter";
+    font-size: 32px;
+    line-height: 150%;
+    background-color: #f3f5fc;
+}
+
+.input-text::placeholder {
+    color: #0a3871;
+}
+
+.input-text:focus,
+.input-text:active {
+    border: none;
+    outline: none;
+}
+
+.instructions {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 75%;
+}
+
+.instructions p {
+    font-family: "Inter";
+    font-size: 12px;
+    color: #495057;
+    opacity: 0.8;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 78%;
+}
+
+.btn-encode {
+    padding: 2%;
+    width: 30%;
+    background-color: #0a3871;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+}
+
+.btn-decode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    width: 30%;
+    background: #d8dfe8;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-size: 18px;
+    text-align: center;
+    color: #0a3871;
+}
+
+.btn-encode:hover,
+.btn-decode:hover {
+    margin: 0.3%;
+    width: 29%;
+    padding: 1.8%;
+}
+
+.result-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    left: 55%;
+    top: 10%;
+    background: #fff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+.result-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    text-align: center;
+}
+
+.result-message h2 {
+    width: 60%;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 24px;
+    color: #343a40;
+}
+
+.result-message p {
+    width: 80%;
+    font-family: "Inter";
+    font-size: 16px;
+    color: #495057;
+}
+
+.result-container img {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 10%;
+}
+
+.output-text {
+    width: 80%;
+    height: 30%;
+    border: none;
+    font-family: "Inter";
+    font-size: 16px;
+    background-color: #f3f5fc;
+    color: #0a3871;
+    margin: 0 auto;
+    display: block;
+}
+
+.btn-copy {
+    background-color: #0a3871;
+    border: none;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-copy:hover {
+    background-color: #083d66;
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #f3f5fc;
+    color: #0a3871;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsivo */
+@media (max-width: 57.5em) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .text-input {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+    .input-text {
+        width: 80%;
+        height: 60%;
+        margin: auto;
+    }
+
+    .instructions {
+        width: 80%;
+        margin: auto;
+    }
+
+    .action-buttons {
+        width: 80%;
+        margin: auto;
+    }
+
+    .btn-encode,
+    .btn-decode {
+        width: 48%;
+        border-radius: 16px;
+    }
+
+    .result-container {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+    .result-message {
+        width: 100%;
+        top: 5%;
+    }
+
+    .result-container img {
+        display: none;
+    }
+}
